@@ -1,0 +1,2 @@
+pepper_dcm_robot/pepper_dcm_bringup:pepper_demo:pepper_moveit_config:pepper_virtual/pepper_control:pepper_virtual/pepper_gazebo_plugin:sorohack_tree
+-DCATKIN_DEVEL_PREFIX=/home/igmitsio/pepper_ws/devel -DCMAKE_INSTALL_PREFIX=/home/igmitsio/pepper_ws/install -G Unix Makefiles

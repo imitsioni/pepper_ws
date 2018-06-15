@@ -1,0 +1,17 @@
+PENDING = 0
+ACTIVE = 1
+PREEMPTED = 2
+SUCCEEDED = 3
+ABORTED = 4
+REJECTED = 5
+PREEMPTING = 6
+RECALLING = 7
+RECALLED = 8
+LOST = 9
+
+states = ['PENDING', 'ACTIVE', 'PREEMPTED', 'SUCCEEDED', 'ABORTED', 'REJECTED', 'PREEMPTING', 'RECALLING', 'RECALLED', 'LOST']
+
+def state_to_str(i):
+    global states
+    return states[i]
+

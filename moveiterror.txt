@@ -1,0 +1,15 @@
+[ 50%] Building CXX object pepper_demo/CMakeFiles/move_bitch.dir/src/move_bitch.cpp.o
+pepper_demo/CMakeFiles/move_bitch.dir/build.make:62: recipe for target 'pepper_demo/CMakeFiles/move_bitch.dir/src/move_bitch.cpp.o' failed
+CMakeFiles/Makefile2:575: recipe for target 'pepper_demo/CMakeFiles/move_bitch.dir/all' failed
+Makefile:138: recipe for target 'all' failed
+Base path: /home/igmitsio/pepper_ws
+Source space: /home/igmitsio/pepper_ws/src
+Build space: /home/igmitsio/pepper_ws/build
+Devel space: /home/igmitsio/pepper_ws/devel
+Install space: /home/igmitsio/pepper_ws/install
+####
+#### Running command: "make cmake_check_build_system" in "/home/igmitsio/pepper_ws/build"
+####
+####
+#### Running command: "make -j8 -l8" in "/home/igmitsio/pepper_ws/build"
+####

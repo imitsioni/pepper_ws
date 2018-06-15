@@ -1,0 +1,8 @@
+prefix=/home/igmitsio/pepper_ws/install
+
+Name: pepper_dcm_bringup
+Description: Description of pepper_dcm_bringup
+Version: 0.0.5
+Cflags: 
+Libs: -L/home/igmitsio/pepper_ws/install/lib 
+Requires: rospy naoqi_dcm_driver

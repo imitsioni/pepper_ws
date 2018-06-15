@@ -1,0 +1,8 @@
+prefix=/home/igmitsio/pepper_ws/install
+
+Name: sorohack_tree
+Description: Description of sorohack_tree
+Version: 0.0.0
+Cflags: -I/home/igmitsio/pepper_ws/install/include
+Libs: -L/home/igmitsio/pepper_ws/install/lib 
+Requires: 

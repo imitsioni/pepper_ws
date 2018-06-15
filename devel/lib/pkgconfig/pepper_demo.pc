@@ -1,0 +1,8 @@
+prefix=/home/igmitsio/pepper_ws/devel
+
+Name: pepper_demo
+Description: Description of pepper_demo
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/igmitsio/pepper_ws/devel/lib 
+Requires: 

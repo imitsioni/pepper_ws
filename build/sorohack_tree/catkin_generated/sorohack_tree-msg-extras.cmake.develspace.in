@@ -1,0 +1,2 @@
+set(sorohack_tree_MESSAGE_FILES "/home/igmitsio/pepper_ws/devel/share/sorohack_tree/msg/BTAction.msg;/home/igmitsio/pepper_ws/devel/share/sorohack_tree/msg/BTActionGoal.msg;/home/igmitsio/pepper_ws/devel/share/sorohack_tree/msg/BTActionResult.msg;/home/igmitsio/pepper_ws/devel/share/sorohack_tree/msg/BTActionFeedback.msg;/home/igmitsio/pepper_ws/devel/share/sorohack_tree/msg/BTGoal.msg;/home/igmitsio/pepper_ws/devel/share/sorohack_tree/msg/BTResult.msg;/home/igmitsio/pepper_ws/devel/share/sorohack_tree/msg/BTFeedback.msg")
+set(sorohack_tree_SERVICE_FILES "")
