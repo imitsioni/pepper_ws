@@ -32,7 +32,7 @@ int main(int argc, char** argv){
     std::cout << current_pose.pose.orientation << '\n';
     std::cout << current_pose.header.frame_id << '\n';
 // ============================================================================
-// 1. As in fts_calib
+// 1. As in fts_calib : NOPE
 // ============================================================================
     // geometry_msgs::Pose pose1;
     // pose1.position.x = 0.564465;
@@ -77,33 +77,89 @@ int main(int argc, char** argv){
 // ROS_INFO("%d", error_codes.val);
 // }
 
-  // Planning to a joint-space goal
+  // Planning to a joint-space goal (part of the official tutorial, WORKS)
   // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   //
-  // Let's set a joint space goal and move towards it.  This will replace the
-  // pose target we set above.
-  //
   // To start, we'll create an pointer that references the current robot's state.
-  // RobotState is the object that contains all the current position/velocity/acceleration data.
+  // // RobotState is the object that contains all the current position/velocity/acceleration data.
     const robot_state::JointModelGroup* joint_model_group =
         move_group->getCurrentState()->getJointModelGroup("left_arm");
   moveit::core::RobotStatePtr current_state = move_group->getCurrentState();
   moveit::planning_interface::MoveGroupInterface::Plan my_plan;
   moveit::planning_interface::MoveItErrorCode success;
-  //
-  // Next get the current set of joint values for the group.
+
+ // Next get the current set of joint values for the group.
   std::vector<double> joint_group_positions;
   current_state->copyJointGroupPositions(joint_model_group, joint_group_positions);
 
   // Now, let's modify one of the joints, plan to the new joint space goal and visualize the plan.
-  joint_group_positions[0] += 0.1;  // radians
-  joint_group_positions[1] += 0.2;
-  move_group->setJointValueTarget(joint_group_positions);
+  joint_group_positions[0] += 0.05;  // radians
+  joint_group_positions[1] += 0.08;
+  // move_group->setJointValueTarget(joint_group_positions);
+  //
+  // success = (move_group->plan(my_plan) == moveit::planning_interface::MoveItErrorCode::SUCCESS);
+  // ROS_INFO_NAMED("tutorial", "Visualizing plan 2 (joint space goal) %s", success ? "" : "FAILED");
+  // sleep(5.0);
+  // move_group->move();
+  // sleep(5.0);
+  // ROS_INFO_NAMED("this part works","Now for cartesian planning");
 
-  success = (move_group->plan(my_plan) == moveit::planning_interface::MoveItErrorCode::SUCCESS);
-  ROS_INFO_NAMED("tutorial", "Visualizing plan 2 (joint space goal) %s", success ? "" : "FAILED");
+  // // ============================================================================
+  //    3. Using "computeCartesianPath"
+  // // ============================================================================
+  std::vector<geometry_msgs::Pose> waypoints;
+  current_pose = move_group->getCurrentPose(); //update it
+  waypoints.push_back(current_pose.pose);
+
+  geometry_msgs::Pose target_pose3 = current_pose.pose;
+  target_pose3.position.z = 0.0045 ;
+  waypoints.push_back(target_pose3);
+
+  target_pose3.position.y = 0.3506;
+  waypoints.push_back(target_pose3);
+  moveit_msgs::RobotTrajectory trajectory;
+  const double jump_threshold = 0.0;
+  const double eef_step = 0.01;
+  double fraction = move_group->computeCartesianPath(waypoints, eef_step, jump_threshold, trajectory);
+  ROS_INFO_NAMED("tutorial", "Visualizing plan 4 (Cartesian path) (%.2f%% acheived)", fraction * 100.0);
   sleep(5.0);
-  move_group->move();
+  moveit::planning_interface::MoveGroupInterface::Plan plan;
+  plan.trajectory_ = trajectory;
+  move_group->execute(plan);
+  sleep(5.0);
+
+  ROS_INFO("NOW LET'S GET BACK TO BASE BITCH");
+
+  std::vector<geometry_msgs::Pose> init_waypoints;
+  current_pose = move_group->getCurrentPose(); //update it
+  waypoints.push_back(current_pose.pose);
+
+  geometry_msgs::Pose init_pose = current_pose.pose;
+  init_pose.position.x = 0.20959;
+  init_pose.position.y = 0.28755;
+  init_pose.position.z = 0.10354 ;
+  init_waypoints.push_back(init_pose);
+
+
+  moveit_msgs::RobotTrajectory trajectory2;
+  // const double jump_threshold = 0.0;
+  // const double eef_step = 0.01;
+  fraction = move_group->computeCartesianPath(init_waypoints, eef_step, jump_threshold, trajectory2);
+  ROS_INFO_NAMED("tutorial", "Visualizing plan 5 (Cartesian path) (%.2f%% acheived)", fraction * 100.0);
+  sleep(5.0);
+  moveit::planning_interface::MoveGroupInterface::Plan plan2;
+  plan2.trajectory_ = trajectory2;
+  move_group->execute(plan2);
+  sleep(5.0);
+
+  ROS_INFO("DID WE GET BACK TO BASE BITCH?");
+
+
+
+
+
+
+
   return 0;
 }
 
