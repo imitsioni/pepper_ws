@@ -96,8 +96,8 @@ int main(int argc, char** argv){
   current_state->copyJointGroupPositions(joint_model_group, joint_group_positions);
 
   // Now, let's modify one of the joints, plan to the new joint space goal and visualize the plan.
-  joint_group_positions[0] = 1.2;  // radians
-  joint_group_positions[1] += 0.05;
+  joint_group_positions[0] += 0.1;  // radians
+  joint_group_positions[1] += 0.2;
   move_group->setJointValueTarget(joint_group_positions);
 
   success = (move_group->plan(my_plan) == moveit::planning_interface::MoveItErrorCode::SUCCESS);
