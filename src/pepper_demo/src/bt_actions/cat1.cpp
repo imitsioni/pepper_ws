@@ -79,8 +79,8 @@ int main(int argc, char** argv){
 
   geometry_msgs::Pose target_pose = current_pose.pose ;
   // target_pose.position.x = 0.35;
-  target_pose.position.y = 0.1;
-  target_pose.position.z = 0.103;
+  target_pose.position.y = 0.12;
+  target_pose.position.z = 0.08;
   waypoints.push_back(target_pose);
 
   // target_pose.position.y = 0.3506;
