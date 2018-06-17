@@ -166,6 +166,51 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+pepper_demo/CMakeFiles/pre_shutdown.dir/rule:
+	cd /home/igmitsio/pepper_ws/build && $(MAKE) -f CMakeFiles/Makefile2 pepper_demo/CMakeFiles/pre_shutdown.dir/rule
+.PHONY : pepper_demo/CMakeFiles/pre_shutdown.dir/rule
+
+# Convenience name for target.
+pre_shutdown: pepper_demo/CMakeFiles/pre_shutdown.dir/rule
+
+.PHONY : pre_shutdown
+
+# fast build rule for target.
+pre_shutdown/fast:
+	cd /home/igmitsio/pepper_ws/build && $(MAKE) -f pepper_demo/CMakeFiles/pre_shutdown.dir/build.make pepper_demo/CMakeFiles/pre_shutdown.dir/build
+.PHONY : pre_shutdown/fast
+
+# Convenience name for target.
+pepper_demo/CMakeFiles/pre_cat.dir/rule:
+	cd /home/igmitsio/pepper_ws/build && $(MAKE) -f CMakeFiles/Makefile2 pepper_demo/CMakeFiles/pre_cat.dir/rule
+.PHONY : pepper_demo/CMakeFiles/pre_cat.dir/rule
+
+# Convenience name for target.
+pre_cat: pepper_demo/CMakeFiles/pre_cat.dir/rule
+
+.PHONY : pre_cat
+
+# fast build rule for target.
+pre_cat/fast:
+	cd /home/igmitsio/pepper_ws/build && $(MAKE) -f pepper_demo/CMakeFiles/pre_cat.dir/build.make pepper_demo/CMakeFiles/pre_cat.dir/build
+.PHONY : pre_cat/fast
+
+# Convenience name for target.
+pepper_demo/CMakeFiles/look_back.dir/rule:
+	cd /home/igmitsio/pepper_ws/build && $(MAKE) -f CMakeFiles/Makefile2 pepper_demo/CMakeFiles/look_back.dir/rule
+.PHONY : pepper_demo/CMakeFiles/look_back.dir/rule
+
+# Convenience name for target.
+look_back: pepper_demo/CMakeFiles/look_back.dir/rule
+
+.PHONY : look_back
+
+# fast build rule for target.
+look_back/fast:
+	cd /home/igmitsio/pepper_ws/build && $(MAKE) -f pepper_demo/CMakeFiles/look_back.dir/build.make pepper_demo/CMakeFiles/look_back.dir/build
+.PHONY : look_back/fast
+
+# Convenience name for target.
 pepper_demo/CMakeFiles/move_bitch.dir/rule:
 	cd /home/igmitsio/pepper_ws/build && $(MAKE) -f CMakeFiles/Makefile2 pepper_demo/CMakeFiles/move_bitch.dir/rule
 .PHONY : pepper_demo/CMakeFiles/move_bitch.dir/rule
@@ -179,6 +224,21 @@ move_bitch: pepper_demo/CMakeFiles/move_bitch.dir/rule
 move_bitch/fast:
 	cd /home/igmitsio/pepper_ws/build && $(MAKE) -f pepper_demo/CMakeFiles/move_bitch.dir/build.make pepper_demo/CMakeFiles/move_bitch.dir/build
 .PHONY : move_bitch/fast
+
+# Convenience name for target.
+pepper_demo/CMakeFiles/cat3.dir/rule:
+	cd /home/igmitsio/pepper_ws/build && $(MAKE) -f CMakeFiles/Makefile2 pepper_demo/CMakeFiles/cat3.dir/rule
+.PHONY : pepper_demo/CMakeFiles/cat3.dir/rule
+
+# Convenience name for target.
+cat3: pepper_demo/CMakeFiles/cat3.dir/rule
+
+.PHONY : cat3
+
+# fast build rule for target.
+cat3/fast:
+	cd /home/igmitsio/pepper_ws/build && $(MAKE) -f pepper_demo/CMakeFiles/cat3.dir/build.make pepper_demo/CMakeFiles/cat3.dir/build
+.PHONY : cat3/fast
 
 # Convenience name for target.
 pepper_demo/CMakeFiles/moveit_ros_manipulation_gencfg.dir/rule:
@@ -316,6 +376,21 @@ tf2_msgs_generate_messages_lisp/fast:
 .PHONY : tf2_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
+pepper_demo/CMakeFiles/hands_down.dir/rule:
+	cd /home/igmitsio/pepper_ws/build && $(MAKE) -f CMakeFiles/Makefile2 pepper_demo/CMakeFiles/hands_down.dir/rule
+.PHONY : pepper_demo/CMakeFiles/hands_down.dir/rule
+
+# Convenience name for target.
+hands_down: pepper_demo/CMakeFiles/hands_down.dir/rule
+
+.PHONY : hands_down
+
+# fast build rule for target.
+hands_down/fast:
+	cd /home/igmitsio/pepper_ws/build && $(MAKE) -f pepper_demo/CMakeFiles/hands_down.dir/build.make pepper_demo/CMakeFiles/hands_down.dir/build
+.PHONY : hands_down/fast
+
+# Convenience name for target.
 pepper_demo/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule:
 	cd /home/igmitsio/pepper_ws/build && $(MAKE) -f CMakeFiles/Makefile2 pepper_demo/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
 .PHONY : pepper_demo/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
@@ -406,6 +481,21 @@ object_recognition_msgs_generate_messages_py/fast:
 .PHONY : object_recognition_msgs_generate_messages_py/fast
 
 # Convenience name for target.
+pepper_demo/CMakeFiles/cat2.dir/rule:
+	cd /home/igmitsio/pepper_ws/build && $(MAKE) -f CMakeFiles/Makefile2 pepper_demo/CMakeFiles/cat2.dir/rule
+.PHONY : pepper_demo/CMakeFiles/cat2.dir/rule
+
+# Convenience name for target.
+cat2: pepper_demo/CMakeFiles/cat2.dir/rule
+
+.PHONY : cat2
+
+# fast build rule for target.
+cat2/fast:
+	cd /home/igmitsio/pepper_ws/build && $(MAKE) -f pepper_demo/CMakeFiles/cat2.dir/build.make pepper_demo/CMakeFiles/cat2.dir/build
+.PHONY : cat2/fast
+
+# Convenience name for target.
 pepper_demo/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule:
 	cd /home/igmitsio/pepper_ws/build && $(MAKE) -f CMakeFiles/Makefile2 pepper_demo/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
 .PHONY : pepper_demo/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
@@ -434,6 +524,21 @@ tf2_msgs_generate_messages_cpp: pepper_demo/CMakeFiles/tf2_msgs_generate_message
 tf2_msgs_generate_messages_cpp/fast:
 	cd /home/igmitsio/pepper_ws/build && $(MAKE) -f pepper_demo/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build.make pepper_demo/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build
 .PHONY : tf2_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+pepper_demo/CMakeFiles/cat1.dir/rule:
+	cd /home/igmitsio/pepper_ws/build && $(MAKE) -f CMakeFiles/Makefile2 pepper_demo/CMakeFiles/cat1.dir/rule
+.PHONY : pepper_demo/CMakeFiles/cat1.dir/rule
+
+# Convenience name for target.
+cat1: pepper_demo/CMakeFiles/cat1.dir/rule
+
+.PHONY : cat1
+
+# fast build rule for target.
+cat1/fast:
+	cd /home/igmitsio/pepper_ws/build && $(MAKE) -f pepper_demo/CMakeFiles/cat1.dir/build.make pepper_demo/CMakeFiles/cat1.dir/build
+.PHONY : cat1/fast
 
 # Convenience name for target.
 pepper_demo/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule:
@@ -781,6 +886,21 @@ object_recognition_msgs_generate_messages_cpp/fast:
 .PHONY : object_recognition_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
+pepper_demo/CMakeFiles/look_front.dir/rule:
+	cd /home/igmitsio/pepper_ws/build && $(MAKE) -f CMakeFiles/Makefile2 pepper_demo/CMakeFiles/look_front.dir/rule
+.PHONY : pepper_demo/CMakeFiles/look_front.dir/rule
+
+# Convenience name for target.
+look_front: pepper_demo/CMakeFiles/look_front.dir/rule
+
+.PHONY : look_front
+
+# fast build rule for target.
+look_front/fast:
+	cd /home/igmitsio/pepper_ws/build && $(MAKE) -f pepper_demo/CMakeFiles/look_front.dir/build.make pepper_demo/CMakeFiles/look_front.dir/build
+.PHONY : look_front/fast
+
+# Convenience name for target.
 pepper_demo/CMakeFiles/shape_msgs_generate_messages_cpp.dir/rule:
 	cd /home/igmitsio/pepper_ws/build && $(MAKE) -f CMakeFiles/Makefile2 pepper_demo/CMakeFiles/shape_msgs_generate_messages_cpp.dir/rule
 .PHONY : pepper_demo/CMakeFiles/shape_msgs_generate_messages_cpp.dir/rule
@@ -1065,6 +1185,222 @@ octomap_msgs_generate_messages_cpp/fast:
 	cd /home/igmitsio/pepper_ws/build && $(MAKE) -f pepper_demo/CMakeFiles/octomap_msgs_generate_messages_cpp.dir/build.make pepper_demo/CMakeFiles/octomap_msgs_generate_messages_cpp.dir/build
 .PHONY : octomap_msgs_generate_messages_cpp/fast
 
+src/bt_actions/cat1.o: src/bt_actions/cat1.cpp.o
+
+.PHONY : src/bt_actions/cat1.o
+
+# target to build an object file
+src/bt_actions/cat1.cpp.o:
+	cd /home/igmitsio/pepper_ws/build && $(MAKE) -f pepper_demo/CMakeFiles/cat1.dir/build.make pepper_demo/CMakeFiles/cat1.dir/src/bt_actions/cat1.cpp.o
+.PHONY : src/bt_actions/cat1.cpp.o
+
+src/bt_actions/cat1.i: src/bt_actions/cat1.cpp.i
+
+.PHONY : src/bt_actions/cat1.i
+
+# target to preprocess a source file
+src/bt_actions/cat1.cpp.i:
+	cd /home/igmitsio/pepper_ws/build && $(MAKE) -f pepper_demo/CMakeFiles/cat1.dir/build.make pepper_demo/CMakeFiles/cat1.dir/src/bt_actions/cat1.cpp.i
+.PHONY : src/bt_actions/cat1.cpp.i
+
+src/bt_actions/cat1.s: src/bt_actions/cat1.cpp.s
+
+.PHONY : src/bt_actions/cat1.s
+
+# target to generate assembly for a file
+src/bt_actions/cat1.cpp.s:
+	cd /home/igmitsio/pepper_ws/build && $(MAKE) -f pepper_demo/CMakeFiles/cat1.dir/build.make pepper_demo/CMakeFiles/cat1.dir/src/bt_actions/cat1.cpp.s
+.PHONY : src/bt_actions/cat1.cpp.s
+
+src/bt_actions/cat2.o: src/bt_actions/cat2.cpp.o
+
+.PHONY : src/bt_actions/cat2.o
+
+# target to build an object file
+src/bt_actions/cat2.cpp.o:
+	cd /home/igmitsio/pepper_ws/build && $(MAKE) -f pepper_demo/CMakeFiles/cat2.dir/build.make pepper_demo/CMakeFiles/cat2.dir/src/bt_actions/cat2.cpp.o
+.PHONY : src/bt_actions/cat2.cpp.o
+
+src/bt_actions/cat2.i: src/bt_actions/cat2.cpp.i
+
+.PHONY : src/bt_actions/cat2.i
+
+# target to preprocess a source file
+src/bt_actions/cat2.cpp.i:
+	cd /home/igmitsio/pepper_ws/build && $(MAKE) -f pepper_demo/CMakeFiles/cat2.dir/build.make pepper_demo/CMakeFiles/cat2.dir/src/bt_actions/cat2.cpp.i
+.PHONY : src/bt_actions/cat2.cpp.i
+
+src/bt_actions/cat2.s: src/bt_actions/cat2.cpp.s
+
+.PHONY : src/bt_actions/cat2.s
+
+# target to generate assembly for a file
+src/bt_actions/cat2.cpp.s:
+	cd /home/igmitsio/pepper_ws/build && $(MAKE) -f pepper_demo/CMakeFiles/cat2.dir/build.make pepper_demo/CMakeFiles/cat2.dir/src/bt_actions/cat2.cpp.s
+.PHONY : src/bt_actions/cat2.cpp.s
+
+src/bt_actions/cat3.o: src/bt_actions/cat3.cpp.o
+
+.PHONY : src/bt_actions/cat3.o
+
+# target to build an object file
+src/bt_actions/cat3.cpp.o:
+	cd /home/igmitsio/pepper_ws/build && $(MAKE) -f pepper_demo/CMakeFiles/cat3.dir/build.make pepper_demo/CMakeFiles/cat3.dir/src/bt_actions/cat3.cpp.o
+.PHONY : src/bt_actions/cat3.cpp.o
+
+src/bt_actions/cat3.i: src/bt_actions/cat3.cpp.i
+
+.PHONY : src/bt_actions/cat3.i
+
+# target to preprocess a source file
+src/bt_actions/cat3.cpp.i:
+	cd /home/igmitsio/pepper_ws/build && $(MAKE) -f pepper_demo/CMakeFiles/cat3.dir/build.make pepper_demo/CMakeFiles/cat3.dir/src/bt_actions/cat3.cpp.i
+.PHONY : src/bt_actions/cat3.cpp.i
+
+src/bt_actions/cat3.s: src/bt_actions/cat3.cpp.s
+
+.PHONY : src/bt_actions/cat3.s
+
+# target to generate assembly for a file
+src/bt_actions/cat3.cpp.s:
+	cd /home/igmitsio/pepper_ws/build && $(MAKE) -f pepper_demo/CMakeFiles/cat3.dir/build.make pepper_demo/CMakeFiles/cat3.dir/src/bt_actions/cat3.cpp.s
+.PHONY : src/bt_actions/cat3.cpp.s
+
+src/bt_actions/hands_down.o: src/bt_actions/hands_down.cpp.o
+
+.PHONY : src/bt_actions/hands_down.o
+
+# target to build an object file
+src/bt_actions/hands_down.cpp.o:
+	cd /home/igmitsio/pepper_ws/build && $(MAKE) -f pepper_demo/CMakeFiles/hands_down.dir/build.make pepper_demo/CMakeFiles/hands_down.dir/src/bt_actions/hands_down.cpp.o
+.PHONY : src/bt_actions/hands_down.cpp.o
+
+src/bt_actions/hands_down.i: src/bt_actions/hands_down.cpp.i
+
+.PHONY : src/bt_actions/hands_down.i
+
+# target to preprocess a source file
+src/bt_actions/hands_down.cpp.i:
+	cd /home/igmitsio/pepper_ws/build && $(MAKE) -f pepper_demo/CMakeFiles/hands_down.dir/build.make pepper_demo/CMakeFiles/hands_down.dir/src/bt_actions/hands_down.cpp.i
+.PHONY : src/bt_actions/hands_down.cpp.i
+
+src/bt_actions/hands_down.s: src/bt_actions/hands_down.cpp.s
+
+.PHONY : src/bt_actions/hands_down.s
+
+# target to generate assembly for a file
+src/bt_actions/hands_down.cpp.s:
+	cd /home/igmitsio/pepper_ws/build && $(MAKE) -f pepper_demo/CMakeFiles/hands_down.dir/build.make pepper_demo/CMakeFiles/hands_down.dir/src/bt_actions/hands_down.cpp.s
+.PHONY : src/bt_actions/hands_down.cpp.s
+
+src/bt_actions/look_back.o: src/bt_actions/look_back.cpp.o
+
+.PHONY : src/bt_actions/look_back.o
+
+# target to build an object file
+src/bt_actions/look_back.cpp.o:
+	cd /home/igmitsio/pepper_ws/build && $(MAKE) -f pepper_demo/CMakeFiles/look_back.dir/build.make pepper_demo/CMakeFiles/look_back.dir/src/bt_actions/look_back.cpp.o
+.PHONY : src/bt_actions/look_back.cpp.o
+
+src/bt_actions/look_back.i: src/bt_actions/look_back.cpp.i
+
+.PHONY : src/bt_actions/look_back.i
+
+# target to preprocess a source file
+src/bt_actions/look_back.cpp.i:
+	cd /home/igmitsio/pepper_ws/build && $(MAKE) -f pepper_demo/CMakeFiles/look_back.dir/build.make pepper_demo/CMakeFiles/look_back.dir/src/bt_actions/look_back.cpp.i
+.PHONY : src/bt_actions/look_back.cpp.i
+
+src/bt_actions/look_back.s: src/bt_actions/look_back.cpp.s
+
+.PHONY : src/bt_actions/look_back.s
+
+# target to generate assembly for a file
+src/bt_actions/look_back.cpp.s:
+	cd /home/igmitsio/pepper_ws/build && $(MAKE) -f pepper_demo/CMakeFiles/look_back.dir/build.make pepper_demo/CMakeFiles/look_back.dir/src/bt_actions/look_back.cpp.s
+.PHONY : src/bt_actions/look_back.cpp.s
+
+src/bt_actions/look_front.o: src/bt_actions/look_front.cpp.o
+
+.PHONY : src/bt_actions/look_front.o
+
+# target to build an object file
+src/bt_actions/look_front.cpp.o:
+	cd /home/igmitsio/pepper_ws/build && $(MAKE) -f pepper_demo/CMakeFiles/look_front.dir/build.make pepper_demo/CMakeFiles/look_front.dir/src/bt_actions/look_front.cpp.o
+.PHONY : src/bt_actions/look_front.cpp.o
+
+src/bt_actions/look_front.i: src/bt_actions/look_front.cpp.i
+
+.PHONY : src/bt_actions/look_front.i
+
+# target to preprocess a source file
+src/bt_actions/look_front.cpp.i:
+	cd /home/igmitsio/pepper_ws/build && $(MAKE) -f pepper_demo/CMakeFiles/look_front.dir/build.make pepper_demo/CMakeFiles/look_front.dir/src/bt_actions/look_front.cpp.i
+.PHONY : src/bt_actions/look_front.cpp.i
+
+src/bt_actions/look_front.s: src/bt_actions/look_front.cpp.s
+
+.PHONY : src/bt_actions/look_front.s
+
+# target to generate assembly for a file
+src/bt_actions/look_front.cpp.s:
+	cd /home/igmitsio/pepper_ws/build && $(MAKE) -f pepper_demo/CMakeFiles/look_front.dir/build.make pepper_demo/CMakeFiles/look_front.dir/src/bt_actions/look_front.cpp.s
+.PHONY : src/bt_actions/look_front.cpp.s
+
+src/bt_actions/pre_cat.o: src/bt_actions/pre_cat.cpp.o
+
+.PHONY : src/bt_actions/pre_cat.o
+
+# target to build an object file
+src/bt_actions/pre_cat.cpp.o:
+	cd /home/igmitsio/pepper_ws/build && $(MAKE) -f pepper_demo/CMakeFiles/pre_cat.dir/build.make pepper_demo/CMakeFiles/pre_cat.dir/src/bt_actions/pre_cat.cpp.o
+.PHONY : src/bt_actions/pre_cat.cpp.o
+
+src/bt_actions/pre_cat.i: src/bt_actions/pre_cat.cpp.i
+
+.PHONY : src/bt_actions/pre_cat.i
+
+# target to preprocess a source file
+src/bt_actions/pre_cat.cpp.i:
+	cd /home/igmitsio/pepper_ws/build && $(MAKE) -f pepper_demo/CMakeFiles/pre_cat.dir/build.make pepper_demo/CMakeFiles/pre_cat.dir/src/bt_actions/pre_cat.cpp.i
+.PHONY : src/bt_actions/pre_cat.cpp.i
+
+src/bt_actions/pre_cat.s: src/bt_actions/pre_cat.cpp.s
+
+.PHONY : src/bt_actions/pre_cat.s
+
+# target to generate assembly for a file
+src/bt_actions/pre_cat.cpp.s:
+	cd /home/igmitsio/pepper_ws/build && $(MAKE) -f pepper_demo/CMakeFiles/pre_cat.dir/build.make pepper_demo/CMakeFiles/pre_cat.dir/src/bt_actions/pre_cat.cpp.s
+.PHONY : src/bt_actions/pre_cat.cpp.s
+
+src/bt_actions/pre_shutdown.o: src/bt_actions/pre_shutdown.cpp.o
+
+.PHONY : src/bt_actions/pre_shutdown.o
+
+# target to build an object file
+src/bt_actions/pre_shutdown.cpp.o:
+	cd /home/igmitsio/pepper_ws/build && $(MAKE) -f pepper_demo/CMakeFiles/pre_shutdown.dir/build.make pepper_demo/CMakeFiles/pre_shutdown.dir/src/bt_actions/pre_shutdown.cpp.o
+.PHONY : src/bt_actions/pre_shutdown.cpp.o
+
+src/bt_actions/pre_shutdown.i: src/bt_actions/pre_shutdown.cpp.i
+
+.PHONY : src/bt_actions/pre_shutdown.i
+
+# target to preprocess a source file
+src/bt_actions/pre_shutdown.cpp.i:
+	cd /home/igmitsio/pepper_ws/build && $(MAKE) -f pepper_demo/CMakeFiles/pre_shutdown.dir/build.make pepper_demo/CMakeFiles/pre_shutdown.dir/src/bt_actions/pre_shutdown.cpp.i
+.PHONY : src/bt_actions/pre_shutdown.cpp.i
+
+src/bt_actions/pre_shutdown.s: src/bt_actions/pre_shutdown.cpp.s
+
+.PHONY : src/bt_actions/pre_shutdown.s
+
+# target to generate assembly for a file
+src/bt_actions/pre_shutdown.cpp.s:
+	cd /home/igmitsio/pepper_ws/build && $(MAKE) -f pepper_demo/CMakeFiles/pre_shutdown.dir/build.make pepper_demo/CMakeFiles/pre_shutdown.dir/src/bt_actions/pre_shutdown.cpp.s
+.PHONY : src/bt_actions/pre_shutdown.cpp.s
+
 src/default.o: src/default.cpp.o
 
 .PHONY : src/default.o
@@ -1155,8 +1491,12 @@ help:
 	@echo "... list_install_components"
 	@echo "... install"
 	@echo "... install/strip"
+	@echo "... pre_shutdown"
+	@echo "... pre_cat"
+	@echo "... look_back"
 	@echo "... edit_cache"
 	@echo "... move_bitch"
+	@echo "... cat3"
 	@echo "... moveit_ros_manipulation_gencfg"
 	@echo "... moveit_ros_planning_gencfg"
 	@echo "... graph_msgs_generate_messages_py"
@@ -1166,14 +1506,17 @@ help:
 	@echo "... octomap_msgs_generate_messages_lisp"
 	@echo "... tf2_msgs_generate_messages_nodejs"
 	@echo "... tf2_msgs_generate_messages_lisp"
+	@echo "... hands_down"
 	@echo "... tf2_msgs_generate_messages_eus"
 	@echo "... tf2_msgs_generate_messages_py"
 	@echo "... moveit_msgs_generate_messages_py"
 	@echo "... sensor_msgs_generate_messages_py"
 	@echo "... sensor_msgs_generate_messages_lisp"
 	@echo "... object_recognition_msgs_generate_messages_py"
+	@echo "... cat2"
 	@echo "... sensor_msgs_generate_messages_nodejs"
 	@echo "... tf2_msgs_generate_messages_cpp"
+	@echo "... cat1"
 	@echo "... sensor_msgs_generate_messages_eus"
 	@echo "... visualization_msgs_generate_messages_nodejs"
 	@echo "... geometry_msgs_generate_messages_py"
@@ -1198,6 +1541,7 @@ help:
 	@echo "... default"
 	@echo "... octomap_msgs_generate_messages_eus"
 	@echo "... object_recognition_msgs_generate_messages_cpp"
+	@echo "... look_front"
 	@echo "... shape_msgs_generate_messages_cpp"
 	@echo "... test"
 	@echo "... octomap_msgs_generate_messages_nodejs"
@@ -1219,6 +1563,30 @@ help:
 	@echo "... trajectory_msgs_generate_messages_py"
 	@echo "... object_recognition_msgs_generate_messages_eus"
 	@echo "... octomap_msgs_generate_messages_cpp"
+	@echo "... src/bt_actions/cat1.o"
+	@echo "... src/bt_actions/cat1.i"
+	@echo "... src/bt_actions/cat1.s"
+	@echo "... src/bt_actions/cat2.o"
+	@echo "... src/bt_actions/cat2.i"
+	@echo "... src/bt_actions/cat2.s"
+	@echo "... src/bt_actions/cat3.o"
+	@echo "... src/bt_actions/cat3.i"
+	@echo "... src/bt_actions/cat3.s"
+	@echo "... src/bt_actions/hands_down.o"
+	@echo "... src/bt_actions/hands_down.i"
+	@echo "... src/bt_actions/hands_down.s"
+	@echo "... src/bt_actions/look_back.o"
+	@echo "... src/bt_actions/look_back.i"
+	@echo "... src/bt_actions/look_back.s"
+	@echo "... src/bt_actions/look_front.o"
+	@echo "... src/bt_actions/look_front.i"
+	@echo "... src/bt_actions/look_front.s"
+	@echo "... src/bt_actions/pre_cat.o"
+	@echo "... src/bt_actions/pre_cat.i"
+	@echo "... src/bt_actions/pre_cat.s"
+	@echo "... src/bt_actions/pre_shutdown.o"
+	@echo "... src/bt_actions/pre_shutdown.i"
+	@echo "... src/bt_actions/pre_shutdown.s"
 	@echo "... src/default.o"
 	@echo "... src/default.i"
 	@echo "... src/default.s"

@@ -7,12 +7,19 @@
 #include <eigen_conversions/eigen_msg.h>
 #include <geometry_msgs/Pose.h>
 #include <geometry_msgs/PoseStamped.h>
+#include <shape_msgs/SolidPrimitive.h>
 #include <moveit/move_group_interface/move_group_interface.h>
+#include <moveit/planning_scene_interface/planning_scene_interface.h>
 #include <Eigen/Core>
+#include <moveit_msgs/CollisionObject.h>
 
 
 
 
+// double set_new_cartesian_pose(moveit::planning_interface::MoveGroupInterface *move_group, geometry_msgs::Pose pose){
+//
+//   return 0.0;
+// }
 
 int main(int argc, char** argv){
 
@@ -22,10 +29,14 @@ int main(int argc, char** argv){
     spinner.start();
 
   	moveit::planning_interface::MoveGroupInterface *move_group;
+    moveit::planning_interface::PlanningSceneInterface planning_scene_interface;
+
     move_group = new moveit::planning_interface::MoveGroupInterface("left_arm");
     move_group-> setPlannerId("RRTConnectkConfigDefault");
     move_group-> setPlanningTime(30);
     // move_group-> setGoalTolerance(0.1);
+
+    ROS_INFO_NAMED("tutorial", "Reference frame: %s", move_group->getPlanningFrame().c_str());
 
     geometry_msgs::PoseStamped current_pose = move_group->getCurrentPose();
     std::cout << current_pose.pose.position << '\n';
@@ -44,14 +55,14 @@ int main(int argc, char** argv){
     // // pose1.orientation.w = current_pose.pose.orientation.w;
     //
     // geometry_msgs::PoseStamped pose2;
-    // pose2.pose = pose1;
+    // pose2.pose = pose1;a
     // pose2.header.frame_id = move_group->getEndEffectorLink().c_str();
     // pose2.header.stamp = ros::Time::now();
     //
     // move_group->setPoseTarget(pose2);
     // move_group->move();
 
-// // ============================================================================
+// ============================================================================
 // // 2. Trying only joint positions
 // // ============================================================================
 //     std::vector<double> j_values;
@@ -93,8 +104,8 @@ int main(int argc, char** argv){
   current_state->copyJointGroupPositions(joint_model_group, joint_group_positions);
 
   // Now, let's modify one of the joints, plan to the new joint space goal and visualize the plan.
-  joint_group_positions[0] += 0.05;  // radians
-  joint_group_positions[1] += 0.08;
+  // joint_group_positions[0] += 0.05;  // radians
+  // joint_group_positions[1] += 0.08;
   // move_group->setJointValueTarget(joint_group_positions);
   //
   // success = (move_group->plan(my_plan) == moveit::planning_interface::MoveItErrorCode::SUCCESS);
@@ -122,11 +133,11 @@ int main(int argc, char** argv){
   const double eef_step = 0.01;
   double fraction = move_group->computeCartesianPath(waypoints, eef_step, jump_threshold, trajectory);
   ROS_INFO_NAMED("tutorial", "Visualizing plan 4 (Cartesian path) (%.2f%% acheived)", fraction * 100.0);
-  sleep(5.0);
+  // sleep(5.0);
   moveit::planning_interface::MoveGroupInterface::Plan plan;
   plan.trajectory_ = trajectory;
-  move_group->execute(plan);
-  sleep(5.0);
+  // move_group->execute(plan);
+  // sleep(5.0);
 
   ROS_INFO("NOW LET'S GET BACK TO BASE BITCH");
 
@@ -135,11 +146,10 @@ int main(int argc, char** argv){
   waypoints.push_back(current_pose.pose);
 
   geometry_msgs::Pose init_pose = current_pose.pose;
-  init_pose.position.x = 0.20959;
-  init_pose.position.y = 0.28755;
-  init_pose.position.z = 0.10354 ;
+  init_pose.position.x = -2.0;
+  init_pose.position.y = -2.0;
+  init_pose.position.z = -2.0 ;
   init_waypoints.push_back(init_pose);
-
 
   moveit_msgs::RobotTrajectory trajectory2;
   // const double jump_threshold = 0.0;
@@ -154,10 +164,79 @@ int main(int argc, char** argv){
 
   ROS_INFO("DID WE GET BACK TO BASE BITCH?");
 
+// adding the table and the owl/sphere
 
+  moveit_msgs::CollisionObject collision_object, collision_object2;
+  collision_object.header.frame_id = move_group->getPlanningFrame();
+  collision_object2.header.frame_id = "base_link";
+  collision_object.id = "table";
+  collision_object2.id = "owl";
 
+  shape_msgs::SolidPrimitive primitive, primitive2;
+  primitive.type = primitive.BOX;
+  primitive.dimensions.resize(3);
+  primitive.dimensions[0] = 1.4;
+  primitive.dimensions[1] = 0.75;
+  primitive.dimensions[2] = 0.70;
 
+  geometry_msgs::Pose box_pose;
+  box_pose.orientation.w = 0.7071;
+  box_pose.orientation.x = 0.0;
+  box_pose.orientation.y = 0.0;
+  box_pose.orientation.z = 0.7071;
+  box_pose.position.x = 0.6;
+  box_pose.position.y = 0.2;
+  box_pose.position.z = -0.4;
 
+  collision_object.primitives.push_back(primitive);
+  collision_object.primitive_poses.push_back(box_pose);
+  collision_object.operation = collision_object.ADD;
+
+  primitive2.type = primitive2.SPHERE;
+  primitive2.dimensions.resize(1);
+  primitive2.dimensions[0] = 0.135;
+
+  geometry_msgs::Pose sphere_pose;
+  sphere_pose.orientation.w = 0.7071;
+  sphere_pose.orientation.x = 0.0;
+  sphere_pose.orientation.y = 0.0;
+  sphere_pose.orientation.z = 0.7071;
+  sphere_pose.position.x = 0.3;
+  sphere_pose.position.y = 0.2;
+  sphere_pose.position.z = 0.0;
+
+  collision_object2.primitives.push_back(primitive2);
+  collision_object2.primitive_poses.push_back(sphere_pose);
+  collision_object2.operation = collision_object2.ADD;
+
+  std::vector<moveit_msgs::CollisionObject> collision_objects;
+  collision_objects.push_back(collision_object);
+  collision_objects.push_back(collision_object2);
+
+  planning_scene_interface.addCollisionObjects(collision_objects);
+
+  // move_group->setStartState(*move_group->getCurrentState());
+
+  std::vector<geometry_msgs::Pose> ca_waypoints;
+  current_pose = move_group->getCurrentPose(); //update it
+  waypoints.push_back(current_pose.pose);
+
+  geometry_msgs::Pose ca_pose = current_pose.pose;
+  ca_pose.position.x = 1.0;
+  ca_pose.position.y = 0.4;
+  ca_pose.position.z = 1.1 ;
+  ca_waypoints.push_back(ca_pose);
+
+  moveit_msgs::RobotTrajectory trajectory3;
+  // const double jump_threshold = 0.0;
+  // const double eef_step = 0.01;
+  fraction = move_group->computeCartesianPath(ca_waypoints, eef_step, jump_threshold, trajectory3);
+  ROS_INFO_NAMED("tutorial", "Visualizing plan 5 (Cartesian path) (%.2f%% acheived)", fraction * 100.0);
+  sleep(5.0);
+  moveit::planning_interface::MoveGroupInterface::Plan plan3;
+  plan3.trajectory_ = trajectory3;
+  move_group->execute(plan3);
+  sleep(5.0);
 
 
   return 0;

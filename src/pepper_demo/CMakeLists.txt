@@ -213,3 +213,27 @@ target_link_libraries(sanity_check ${catkin_LIBRARIES})
 
 add_executable(default src/default.cpp)
 target_link_libraries(default ${catkin_LIBRARIES})
+
+add_executable(cat1 src/bt_actions/cat1.cpp)
+target_link_libraries(cat1 ${catkin_LIBRARIES})
+
+add_executable(cat2 src/bt_actions/cat2.cpp)
+target_link_libraries(cat2 ${catkin_LIBRARIES})
+
+add_executable(cat3 src/bt_actions/cat3.cpp)
+target_link_libraries(cat3 ${catkin_LIBRARIES})
+
+add_executable(look_back src/bt_actions/look_back.cpp)
+target_link_libraries(look_back ${catkin_LIBRARIES})
+
+add_executable(look_front src/bt_actions/look_front.cpp)
+target_link_libraries(look_front ${catkin_LIBRARIES})
+
+add_executable(pre_cat src/bt_actions/pre_cat.cpp)
+target_link_libraries(pre_cat ${catkin_LIBRARIES})
+
+add_executable(pre_shutdown src/bt_actions/pre_shutdown.cpp)
+target_link_libraries(pre_shutdown ${catkin_LIBRARIES})
+
+add_executable(hands_down src/bt_actions/hands_down.cpp)
+target_link_libraries(hands_down ${catkin_LIBRARIES})

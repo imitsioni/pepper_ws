@@ -29,6 +29,7 @@ pepper_demo/CMakeFiles/default.dir/src/default.cpp.o: /opt/ros/kinetic/include/m
 pepper_demo/CMakeFiles/default.dir/src/default.cpp.o: /opt/ros/kinetic/include/moveit/macros/declare_ptr.h
 pepper_demo/CMakeFiles/default.dir/src/default.cpp.o: /opt/ros/kinetic/include/moveit/macros/deprecation.h
 pepper_demo/CMakeFiles/default.dir/src/default.cpp.o: /opt/ros/kinetic/include/moveit/move_group_interface/move_group_interface.h
+pepper_demo/CMakeFiles/default.dir/src/default.cpp.o: /opt/ros/kinetic/include/moveit/planning_scene_interface/planning_scene_interface.h
 pepper_demo/CMakeFiles/default.dir/src/default.cpp.o: /opt/ros/kinetic/include/moveit/robot_model/fixed_joint_model.h
 pepper_demo/CMakeFiles/default.dir/src/default.cpp.o: /opt/ros/kinetic/include/moveit/robot_model/floating_joint_model.h
 pepper_demo/CMakeFiles/default.dir/src/default.cpp.o: /opt/ros/kinetic/include/moveit/robot_model/joint_model.h
@@ -40,6 +41,8 @@ pepper_demo/CMakeFiles/default.dir/src/default.cpp.o: /opt/ros/kinetic/include/m
 pepper_demo/CMakeFiles/default.dir/src/default.cpp.o: /opt/ros/kinetic/include/moveit/robot_model/robot_model.h
 pepper_demo/CMakeFiles/default.dir/src/default.cpp.o: /opt/ros/kinetic/include/moveit/robot_state/attached_body.h
 pepper_demo/CMakeFiles/default.dir/src/default.cpp.o: /opt/ros/kinetic/include/moveit/robot_state/robot_state.h
+pepper_demo/CMakeFiles/default.dir/src/default.cpp.o: /opt/ros/kinetic/include/moveit_msgs/AllowedCollisionEntry.h
+pepper_demo/CMakeFiles/default.dir/src/default.cpp.o: /opt/ros/kinetic/include/moveit_msgs/AllowedCollisionMatrix.h
 pepper_demo/CMakeFiles/default.dir/src/default.cpp.o: /opt/ros/kinetic/include/moveit_msgs/AttachedCollisionObject.h
 pepper_demo/CMakeFiles/default.dir/src/default.cpp.o: /opt/ros/kinetic/include/moveit_msgs/BoundingVolume.h
 pepper_demo/CMakeFiles/default.dir/src/default.cpp.o: /opt/ros/kinetic/include/moveit_msgs/CollisionObject.h
@@ -48,11 +51,16 @@ pepper_demo/CMakeFiles/default.dir/src/default.cpp.o: /opt/ros/kinetic/include/m
 pepper_demo/CMakeFiles/default.dir/src/default.cpp.o: /opt/ros/kinetic/include/moveit_msgs/GripperTranslation.h
 pepper_demo/CMakeFiles/default.dir/src/default.cpp.o: /opt/ros/kinetic/include/moveit_msgs/JointConstraint.h
 pepper_demo/CMakeFiles/default.dir/src/default.cpp.o: /opt/ros/kinetic/include/moveit_msgs/JointLimits.h
+pepper_demo/CMakeFiles/default.dir/src/default.cpp.o: /opt/ros/kinetic/include/moveit_msgs/LinkPadding.h
+pepper_demo/CMakeFiles/default.dir/src/default.cpp.o: /opt/ros/kinetic/include/moveit_msgs/LinkScale.h
 pepper_demo/CMakeFiles/default.dir/src/default.cpp.o: /opt/ros/kinetic/include/moveit_msgs/MotionPlanRequest.h
 pepper_demo/CMakeFiles/default.dir/src/default.cpp.o: /opt/ros/kinetic/include/moveit_msgs/MoveItErrorCodes.h
+pepper_demo/CMakeFiles/default.dir/src/default.cpp.o: /opt/ros/kinetic/include/moveit_msgs/ObjectColor.h
 pepper_demo/CMakeFiles/default.dir/src/default.cpp.o: /opt/ros/kinetic/include/moveit_msgs/OrientationConstraint.h
 pepper_demo/CMakeFiles/default.dir/src/default.cpp.o: /opt/ros/kinetic/include/moveit_msgs/PlaceLocation.h
 pepper_demo/CMakeFiles/default.dir/src/default.cpp.o: /opt/ros/kinetic/include/moveit_msgs/PlannerInterfaceDescription.h
+pepper_demo/CMakeFiles/default.dir/src/default.cpp.o: /opt/ros/kinetic/include/moveit_msgs/PlanningScene.h
+pepper_demo/CMakeFiles/default.dir/src/default.cpp.o: /opt/ros/kinetic/include/moveit_msgs/PlanningSceneWorld.h
 pepper_demo/CMakeFiles/default.dir/src/default.cpp.o: /opt/ros/kinetic/include/moveit_msgs/PositionConstraint.h
 pepper_demo/CMakeFiles/default.dir/src/default.cpp.o: /opt/ros/kinetic/include/moveit_msgs/RobotState.h
 pepper_demo/CMakeFiles/default.dir/src/default.cpp.o: /opt/ros/kinetic/include/moveit_msgs/RobotTrajectory.h
@@ -60,6 +68,8 @@ pepper_demo/CMakeFiles/default.dir/src/default.cpp.o: /opt/ros/kinetic/include/m
 pepper_demo/CMakeFiles/default.dir/src/default.cpp.o: /opt/ros/kinetic/include/moveit_msgs/VisibilityConstraint.h
 pepper_demo/CMakeFiles/default.dir/src/default.cpp.o: /opt/ros/kinetic/include/moveit_msgs/WorkspaceParameters.h
 pepper_demo/CMakeFiles/default.dir/src/default.cpp.o: /opt/ros/kinetic/include/object_recognition_msgs/ObjectType.h
+pepper_demo/CMakeFiles/default.dir/src/default.cpp.o: /opt/ros/kinetic/include/octomap_msgs/Octomap.h
+pepper_demo/CMakeFiles/default.dir/src/default.cpp.o: /opt/ros/kinetic/include/octomap_msgs/OctomapWithPose.h
 pepper_demo/CMakeFiles/default.dir/src/default.cpp.o: /opt/ros/kinetic/include/random_numbers/random_numbers.h
 pepper_demo/CMakeFiles/default.dir/src/default.cpp.o: /opt/ros/kinetic/include/ros/advertise_options.h
 pepper_demo/CMakeFiles/default.dir/src/default.cpp.o: /opt/ros/kinetic/include/ros/advertise_service_options.h
