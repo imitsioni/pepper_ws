@@ -60,7 +60,7 @@ int main(int argc, char** argv){
   box_pose.orientation.z = 0.7071;
   box_pose.position.x = 0.6;
   box_pose.position.y = 0.2;
-  box_pose.position.z = -0.4;
+  box_pose.position.z = 0.4;
 
   collision_object.primitives.push_back(primitive);
   collision_object.primitive_poses.push_back(box_pose);
@@ -80,7 +80,7 @@ int main(int argc, char** argv){
   geometry_msgs::Pose target_pose = current_pose.pose ;
   // target_pose.position.x = 0.35;
   target_pose.position.y = 0.12;
-  target_pose.position.z = 0.08;
+  target_pose.position.z = 0.8;
   waypoints.push_back(target_pose);
 
   // target_pose.position.y = 0.3506;
